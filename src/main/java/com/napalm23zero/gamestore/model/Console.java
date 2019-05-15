@@ -3,9 +3,7 @@ package com.napalm23zero.gamestore.model;
 import java.util.Date;
 import java.util.Set;
 
-import com.napalm23zero.gamestore.enums.AgeRating;
-import com.napalm23zero.gamestore.enums.Genre;
-import com.napalm23zero.gamestore.enums.Language;
+import com.napalm23zero.gamestore.enums.Color;
 
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
@@ -15,29 +13,21 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@Document(collection = "game")
-public class Game {
+@Document(collection = "console")
+public class Console {
 
     @Id
     private Long _id;
 
     private String title;
 
-    private Set<Genre> genre;
-
     private String description;
 
-    private AgeRating ageRating;
+    private Double storageGb;
 
-    private Set<Language> audio;
+    private Set<Color> color;
 
-    private Set<Language> subtitles;
-
-    private Boolean isOnline;
-
-    private Set<Console> platform;
-
-    private Boolean isNew;
+    private Boolean is_new;
 
     private Double price;
 
