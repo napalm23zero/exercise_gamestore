@@ -1,4 +1,4 @@
-package com.napalm23zero.gamestore.model;
+package com.napalm23zero.gamestore.models;
 
 import lombok.Getter;
 import lombok.Setter;
