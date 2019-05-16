@@ -10,7 +10,7 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class Product {
+public abstract class Product {
 
     @Id
     private Long _id;
