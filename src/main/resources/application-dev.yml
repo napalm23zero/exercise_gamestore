@@ -7,3 +7,7 @@ spring:
       password: password
       authentication-database: admin
       database: gamestore
+  server:
+    port: 8080
+    servlet:
+      context-path: /gamestore/api
