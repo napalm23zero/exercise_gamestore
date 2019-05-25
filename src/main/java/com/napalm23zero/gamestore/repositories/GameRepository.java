@@ -1,8 +1,9 @@
 package com.napalm23zero.gamestore.repositories;
 
 import com.napalm23zero.gamestore.models.Game;
-import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
 
-public interface GameRepository extends MongoRepository<Game, Long> {
+@Repository
+public interface GameRepository extends GenericRepository<Game, Long> {
 
 }

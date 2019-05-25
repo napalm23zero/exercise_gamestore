@@ -18,9 +18,9 @@ public class Game extends Product {
 
     private AgeRating ageRating;
 
-    private Set<Language> avaiableAudios;
+    private Set<Language> availableAudios;
 
-    private Set<Language> avaiableSubtitles;
+    private Set<Language> availableSubtitles;
 
     private Boolean isOnline;
 
