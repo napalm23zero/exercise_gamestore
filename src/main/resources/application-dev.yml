@@ -3,9 +3,9 @@ spring:
     mongodb:
       host: localhost
       port: 27017
-      username: root
-      password: password
-      authentication-database: admin
+      username: spring-boot
+      password: xyz123
+      authentication-database: gamestore
       database: gamestore
   server:
     port: 8080
