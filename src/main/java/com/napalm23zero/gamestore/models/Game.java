@@ -13,17 +13,10 @@ import java.util.Set;
 @Setter
 @Document(collection = "product")
 public class Game extends Product {
-
     private Set<Genre> genres;
-
     private AgeRating ageRating;
-
     private Set<Language> availableAudios;
-
     private Set<Language> availableSubtitles;
-
     private Boolean isOnline;
-
     private Set<Console> compatibleConsoles;
-
 }

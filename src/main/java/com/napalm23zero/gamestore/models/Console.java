@@ -11,9 +11,6 @@ import java.util.Set;
 @Setter
 @Document(collection = "product")
 public class Console extends Product {
-
     private Double storageGb;
-
     private Set<Color> color;
-
 }

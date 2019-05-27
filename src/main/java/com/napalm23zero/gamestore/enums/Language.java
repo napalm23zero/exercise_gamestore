@@ -11,5 +11,4 @@ public enum Language {
     QU, RM, RMY, RN, RO, ROA_RUP, RU, RW, SA, SC, SCN, SCO, SD, SE, SG, SH, SI, SIMPLE, SK, SL, SM, SN, SO, SQ, SR, SS,
     ST, SU, SV, SW, TA, TE, TET, TG, TH, TI, TK, TL, TLH, TN, TO, TPI, TR, TS, TT, TUM, TW, TY, UDM, UG, UK, UR, UZ, VE,
     VEC, VI, VLS, VO, WA, WAR, WO, XAL, XH, XMF, YI, YO, ZA, ZH, ZH_CLASSICAL, ZH_MIN_NAN, ZH_YUE, ZU
-
 }

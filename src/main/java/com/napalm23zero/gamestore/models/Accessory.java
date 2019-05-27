@@ -11,11 +11,7 @@ import java.util.Set;
 @Setter
 @Document(collection = "product")
 public class Accessory extends Product {
-
     private Set<Console> compatibleConsoles;
-
     private Set<Game> compatibleGame;
-
     private Set<Color> color;
-
 }
