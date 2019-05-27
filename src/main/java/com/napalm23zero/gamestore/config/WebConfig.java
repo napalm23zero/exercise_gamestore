@@ -28,7 +28,6 @@ public class WebConfig implements WebMvcConfigurer {
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("**/*.css", "**/*.js", "**/*.map", "*.html", "swagger-ui.html")
                 .addResourceLocations("classpath:META-INF/resources/").setCachePeriod(0);
-
         registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/META-INF/resources/webjars/");
     }
 
@@ -36,7 +35,6 @@ public class WebConfig implements WebMvcConfigurer {
     public CorsFilter corsFilter() {
         final UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         final CorsConfiguration config = new CorsConfiguration();
-
         config.setAllowCredentials(true);
         config.addAllowedOrigin("*");
         config.addAllowedHeader("*");
@@ -54,7 +52,6 @@ public class WebConfig implements WebMvcConfigurer {
     @Bean
     public MessageSource messageSource() {
         ReloadableResourceBundleMessageSource messageResource = new ReloadableResourceBundleMessageSource();
-
         messageResource.setBasename("classpath:messages");
         messageResource.setDefaultEncoding(UTF8_ENCODING);
         return (messageResource);
@@ -63,7 +60,6 @@ public class WebConfig implements WebMvcConfigurer {
     @Bean
     public LocaleResolver localeResolver() {
         SessionLocaleResolver slr = new SessionLocaleResolver();
-
         slr.setDefaultLocale(new Locale("pt", "BR"));
         return (slr);
     }
