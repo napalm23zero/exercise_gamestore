@@ -1,18 +1,18 @@
 package com.napalm23zero.gamestore.controllers;
 
-import com.napalm23zero.gamestore.models.Game;
-import com.napalm23zero.gamestore.services.GameService;
+import com.napalm23zero.gamestore.models.Console;
+import com.napalm23zero.gamestore.services.ConsoleService;
 import io.swagger.annotations.Api;
 import org.bson.types.ObjectId;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-@Api(tags = "Game")
+@Api(tags = "Console")
 @RestController
-@RequestMapping("/game")
-public class GameController extends GenericController<Game, ObjectId> {
+@RequestMapping("/console")
+public class ConsoleController extends GenericController<Console, ObjectId> {
 
-    GameController(GameService service) {
+    ConsoleController(ConsoleService service) {
         super(service);
     }
 }

@@ -1,6 +1,5 @@
 package com.napalm23zero.gamestore.services.impl;
 
-import com.napalm23zero.gamestore.models.Game;
 import com.napalm23zero.gamestore.repositories.GenericRepository;
 import com.napalm23zero.gamestore.services.GenericService;
 import org.springframework.data.domain.*;
@@ -52,7 +51,6 @@ public class GenericServiceImpl<R, D> implements GenericService<R, D> {
         Example<R> query = Example.of(entity, matcher);
         return genericRepository.findAll(query, pagination);
     }
-
 
     // Default Generic Methods
     @Override
