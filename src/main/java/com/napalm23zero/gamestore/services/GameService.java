@@ -9,13 +9,13 @@ import org.springframework.data.domain.Sort;
 import java.util.Optional;
 
 public interface GameService extends GenericService<Game, ObjectId>, GameRepository {
-    Game create(Game game);
+
 
     Optional<Game> read(ObjectId id);
 
     Game update(Game game);
 
-    void delete(ObjectId id);
+    void delete(Game id);
 
     Page<Game> list(Integer pageNumber, Integer pageSize, Sort.Direction direction, String orderBy);
 
