@@ -18,8 +18,6 @@ import java.util.Optional;
  * @param <U> Generic Entity ObjectId
  */
 public class GenericController<E, U> {
-
-
     private final GenericService<E, U> service;
 
     @Autowired
