@@ -17,9 +17,4 @@ public class GameServiceImpl extends GenericServiceImpl<Game, ObjectId> implemen
         super(genericRepository);
     }
 
-    @Override
-    public void deleteById(ObjectId id) {
-        repository.deleteById(id);
-    }
-
 }
