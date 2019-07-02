@@ -9,9 +9,7 @@ import org.springframework.stereotype.Service;
 
 @Service("accessoryService")
 public class AccessoryServiceImpl extends GenericServiceImpl<Accessory, ObjectId> implements AccessoryService {
-
     public AccessoryServiceImpl(GenericRepository<Accessory, ObjectId> genericRepository) {
         super(genericRepository);
     }
-
 }

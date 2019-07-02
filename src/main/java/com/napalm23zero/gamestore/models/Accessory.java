@@ -1,11 +1,12 @@
 package com.napalm23zero.gamestore.models;
 
-import com.napalm23zero.gamestore.enums.Color;
-import lombok.Getter;
-import lombok.Setter;
+import java.awt.Color;
+import java.util.Set;
+
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.Set;
+import lombok.Getter;
+import lombok.Setter;
 
 @Getter
 @Setter

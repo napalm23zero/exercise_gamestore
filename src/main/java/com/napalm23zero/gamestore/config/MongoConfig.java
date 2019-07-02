@@ -4,6 +4,7 @@ import com.mongodb.MongoClient;
 import com.mongodb.MongoClientOptions;
 import com.mongodb.MongoCredential;
 import com.mongodb.ServerAddress;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -15,17 +16,16 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 @EnableMongoRepositories(basePackages = "com.napalm23zero.gamestore.repositories")
 public class MongoConfig extends AbstractMongoConfiguration {
 
-    @Value("${spring.data.mongodb.username}")
+    @Value("${spring.datasource.mongo.username}")
     private String username;
-    @Value("${spring.data.mongodb.password}")
+    @Value("${spring.datasource.mongo.password}")
     private String password;
-    @Value("${spring.data.mongodb.database}")
+    @Value("${spring.datasource.mongo.database}")
     private String database;
-    @Value("${spring.data.mongodb.host}")
+    @Value("${spring.datasource.mongo.host}")
     private String host;
-    @Value("${spring.data.mongodb.port}")
+    @Value("${spring.datasource.mongo.port}")
     private Integer port;
-
 
     @Override
     public MongoClient mongoClient() {

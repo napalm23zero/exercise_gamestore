@@ -13,7 +13,6 @@ import io.swagger.annotations.Api;
 @RestController
 @RequestMapping("/console")
 public class ConsoleController extends GenericController<Console, ObjectId> {
-
     ConsoleController(ConsoleService service) {
         super(service);
     }

@@ -13,7 +13,6 @@ import io.swagger.annotations.Api;
 @RestController
 @RequestMapping("/game")
 public class GameController extends GenericController<Game, ObjectId> {
-
     GameController(GameService service) {
         super(service);
     }

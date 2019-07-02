@@ -9,9 +9,7 @@ import org.springframework.stereotype.Service;
 
 @Service("consoleService")
 public class ConsoleServiceImpl extends GenericServiceImpl<Console, ObjectId> implements ConsoleService {
-
     public ConsoleServiceImpl(GenericRepository<Console, ObjectId> genericRepository) {
         super(genericRepository);
     }
-
 }

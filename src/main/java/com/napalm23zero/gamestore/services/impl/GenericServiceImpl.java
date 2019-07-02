@@ -2,7 +2,12 @@ package com.napalm23zero.gamestore.services.impl;
 
 import com.napalm23zero.gamestore.repositories.GenericRepository;
 import com.napalm23zero.gamestore.services.GenericService;
-import org.springframework.data.domain.*;
+import org.springframework.data.domain.Example;
+import org.springframework.data.domain.ExampleMatcher;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.domain.Sort;
 
 import java.util.List;
 import java.util.Optional;
@@ -39,7 +44,8 @@ public class GenericServiceImpl<R, D> implements GenericService<R, D> {
     @Override
     public Page<R> search(R entity, Integer pageNumber, Integer pageSize, Sort.Direction direction, String orderBy) {
         Pageable pagination = PageRequest.of(pageNumber, pageSize, direction, orderBy);
-        ExampleMatcher matcher = ExampleMatcher.matching().withIgnoreCase().withIgnoreNullValues().withStringMatcher(ExampleMatcher.StringMatcher.CONTAINING).withIgnorePaths("id");
+        ExampleMatcher matcher = ExampleMatcher.matching().withIgnoreCase().withIgnoreNullValues()
+                .withStringMatcher(ExampleMatcher.StringMatcher.CONTAINING).withIgnorePaths("id");
         Example<R> query = Example.of(entity, matcher);
         return genericRepository.findAll(query, pagination);
     }
@@ -47,7 +53,8 @@ public class GenericServiceImpl<R, D> implements GenericService<R, D> {
     @Override
     public Page<R> find(R entity, Integer pageNumber, Integer pageSize, Sort.Direction direction, String orderBy) {
         Pageable pagination = PageRequest.of(pageNumber, pageSize, direction, orderBy);
-        ExampleMatcher matcher = ExampleMatcher.matching().withIgnoreCase().withIgnoreNullValues().withStringMatcher(ExampleMatcher.StringMatcher.EXACT).withIgnorePaths("id");
+        ExampleMatcher matcher = ExampleMatcher.matching().withIgnoreCase().withIgnoreNullValues()
+                .withStringMatcher(ExampleMatcher.StringMatcher.EXACT).withIgnorePaths("id");
         Example<R> query = Example.of(entity, matcher);
         return genericRepository.findAll(query, pagination);
     }
@@ -153,5 +160,4 @@ public class GenericServiceImpl<R, D> implements GenericService<R, D> {
     public <S extends R> boolean exists(Example<S> example) {
         return genericRepository.exists(example);
     }
-
 }

@@ -1,13 +1,14 @@
 package com.napalm23zero.gamestore.services;
 
-import com.napalm23zero.gamestore.repositories.GenericRepository;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Sort;
-
 import java.util.Optional;
 
-public interface GenericService<E, D> extends GenericRepository<E, D> {
+import com.napalm23zero.gamestore.repositories.GenericRepository;
 
+import org.springframework.data.domain.Sort;
+
+import org.springframework.data.domain.Page;
+
+public interface GenericService<E, D> extends GenericRepository<E, D> {
     E create(E entity);
 
     Optional<E> read(D id);

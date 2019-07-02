@@ -13,7 +13,6 @@ import io.swagger.annotations.Api;
 @RestController
 @RequestMapping("/accessory")
 public class AccessoryController extends GenericController<Accessory, ObjectId> {
-
     AccessoryController(AccessoryService service) {
         super(service);
     }

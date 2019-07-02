@@ -1,13 +1,15 @@
 package com.napalm23zero.gamestore.models;
 
+import java.util.Set;
+
 import com.napalm23zero.gamestore.enums.AgeRating;
 import com.napalm23zero.gamestore.enums.Genre;
 import com.napalm23zero.gamestore.enums.Language;
-import lombok.Getter;
-import lombok.Setter;
+
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.Set;
+import lombok.Getter;
+import lombok.Setter;
 
 @Getter
 @Setter

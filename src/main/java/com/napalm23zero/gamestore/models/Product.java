@@ -1,12 +1,13 @@
 package com.napalm23zero.gamestore.models;
 
-import lombok.Getter;
-import lombok.Setter;
+import java.util.Date;
+import java.util.Set;
+
 import org.bson.types.ObjectId;
 import org.springframework.data.annotation.Id;
 
-import java.util.Date;
-import java.util.Set;
+import lombok.Getter;
+import lombok.Setter;
 
 @Getter
 @Setter

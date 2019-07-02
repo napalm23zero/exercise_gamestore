@@ -9,9 +9,7 @@ import org.springframework.stereotype.Service;
 
 @Service("gameService")
 public class GameServiceImpl extends GenericServiceImpl<Game, ObjectId> implements GameService {
-
     public GameServiceImpl(GenericRepository<Game, ObjectId> genericRepository) {
         super(genericRepository);
     }
-
 }
